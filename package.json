@@ -16,7 +16,19 @@
     "build": "vite build",
     "deploy": "vite build && wrangler deploy",
     "types": "wrangler types env.d.ts",
-    "check": "tsc --noEmit"
+    "check": "tsc --noEmit",
+    "lint": "oxlint -D correctness -A no-unused-vars -A no-explicit-any src",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest",
+    "test:tools": "tsx scripts/test-tools-unit.ts",
+    "test:llm": "tsx scripts/test-scenarios.ts",
+    "test:memory": "tsx scripts/test-memory.ts",
+    "test:planner": "tsx scripts/test-planner.ts",
+    "test:policies": "tsx scripts/test-policies-unit.ts",
+    "test:guardrails": "tsx scripts/test-guardrails-agent.ts",
+    "test:workflow": "tsx scripts/test-workflow-unit.ts",
+    "test:approval": "tsx scripts/test-approval-unit.ts"
   },
   "dependencies": {
     "@cloudflare/ai-chat": "^0.9.3",
@@ -40,11 +52,14 @@
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.3",
+    "@vitest/coverage-v8": "^4.1.11",
     "oxfmt": "^0.56.0",
     "oxlint": "^1.71.0",
     "tailwindcss": "^4.3.1",
+    "tsx": "^4.23.13",
     "typescript": "^6.0.3",
     "vite": "^8.1.0",
+    "vitest": "^4.1.11",
     "wrangler": "^4.113.0"
   },
   "allowScripts": {
