@@ -274,7 +274,7 @@ DeployMate is designed as an architectural reference and platform engineering de
 - **Live Kubernetes Integration**: Direct integration with Kubernetes API servers using Cloudflare Tunnel and mTLS to inspect pods, deployments, and cluster events.
 - **Real CI/CD Execution**: Webhook integrations to trigger and monitor live GitHub Actions workflows and ArgoCD rollouts.
 - **Automated Canary Rollback**: Real-time observability tracking error rates and p99 latency with automated workflow rollbacks upon metric degradation.
-
+codereview
 ---
 
 ## License
